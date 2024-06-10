@@ -24,4 +24,4 @@ window.onscroll = function(){
     if (scrollPoint >= altura){
         proxImagem( item++ % max);
     }
-}
+} 
