@@ -1,3 +1,15 @@
-body{
+body {
     display: flex;
+    flex-direction: column;
+    width: 3840px;
+    height: 2160px;
+    background-color: #ffe4e1;
+}
+
+.perfil {
+    width: 3840px;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-items: end;
 }
