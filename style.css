@@ -26,6 +26,7 @@ body {
 .cachorrobobo {
     width: 60px;
     height: 60px;
+    border-radius: 20%;
 }
 
 .portifolio {
