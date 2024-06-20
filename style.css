@@ -6,22 +6,47 @@
 
 body {
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
     background-color: #ffe4e1;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-content: center;
     justify-content: space-between;
     align-items: center;
 }
 
+.Tudo {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.Tudo2 {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 60%;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+
 .foto_perfil {
-    position: sticky;
     align-self: flex-start;
     display: flex;
     width: 60px;
     height: 60px;
+    align-self: flex-start;
 }
 
 .cachorrobobo {
@@ -47,7 +72,7 @@ body {
 .conteudo {
     display: flex;
     flex-direction: column;
-    width: 430px;
+    width: 600px;
     height: 500px;
     font-family: "Playwrite IS", cursive;
     flex-wrap: nowrap;
@@ -58,12 +83,53 @@ body {
     align-items: center;
     border-radius: 5%;
 }
+
+.Contatos {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 200px;
+    font-family: "Playwrite IS", cursive;
+    flex-wrap: nowrap;
+    text-align: justify;
+    overflow: hidden;
+    border: solid black;
+    align-content: center;
+    align-items: center;
+    border-radius: 5%;
+    justify-content: space-around;
+}
+
+.Contatos2 {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    height: 125px;
+    font-family: "Playwrite IS", cursive;
+    flex-wrap: nowrap;
+    text-align: justify;
+    overflow: hidden;
+    border: solid black;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    background-color: peachpuff;
+}
+
+a {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
 .conteudo2 {
     display: flex;
     flex-direction: column;
     width: 500px;
     height: 250px;
-    font-family: "Playwrite IS", cursive;
     flex-wrap: nowrap;
     text-align: justify;
     overflow: hidden;
@@ -73,7 +139,30 @@ body {
     border-radius: 10%;
 }
 
+.Projetos {
+    font-size: 35px;
+}
+
 .eu {
     width: 260px;
     height: 350px;
+}
+
+img:hover {
+    transform: scale(2);
+    transition: 0.5s all ease-in-out;
+}
+
+.lista {
+    width: 50px;
+    height: 30px;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    background-color: lightcoral;
+    align-self: baseline;
+
 }
