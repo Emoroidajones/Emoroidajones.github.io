@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Banana</title>
+    <link href='https://fonts.googleapis.com/css?family=Kavoon' rel='stylesheet'>
+</head>
+
+<body>
+
+    
+
+    <div class="Bananao">
+        <div id="ScoreBananas" class="Score">
+            <p id="BananaC">Bananas: 0</p>
+            <p id="tProducao">Bananas Por Click: 0</p>
+            <p id="BananaSegundo">Bananas Por Click: 0</p>
+
+        </div>
+
+        <button onclick="ProduzirBananas()" value="Click "> 
+            <img src="Imagens/banana-removebg-preview.png" alt="" width=" 100px" height="100px">
+        </button>
+        
+        
+    </div>
+
+    <div class="separatorLeft"></div>
+
+
+
+    <div class="Pesquisa" id="Pesquisa">
+        <button id="nuke" onclick="NUKE();" style="display: none;"><img src="Imagens/botao.png" alt=""  width="90px" height="90px" ></button>
+        
+        <button onclick="Abre();"> <img src="Imagens/lab.png" alt="" srcset="" id="lab" width="90px"></button>
+        <div class="Componentes" id="Componentes">
+            <button onclick="fechaJ();">Fechar</button>
+            <div>
+                <p id="Texto">Peças Direto Do AliExpres</p>
+                <img src="Imagens/sucata.png"  id="Imagem" alt="" srcset="" width="90px">
+                <button id="inicio" onclick="Iniciar();"> Iniciar</button>
+                <P id="timer">15</P>
+                
+            
+
+            </div>
+            
+            
+        </div>
+
+        <div class="Calculos">
+
+        </div>
+
+        <div class="Converter">
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <div class="separatorRight"></div>
+    <div id="Loja" class="Loja">
+
+        <div class="Upgrades">
+            <!-- quando for criar o  botao,cruia a id que nem em baixo -->
+            <button id="BotoesUpC1" onclick="upaCursor()" style="display: none;"> <img src="Imagens/Cursor.png" alt="" width="30px" >
+                <p id="precoUpC">x2 100</p>
+                  
+            </button>
+
+            <button id="BotoesUpM1" onclick="upaMacaco()" style="display: none;"> <img src="Imagens/macaco.png" alt="" width="30px" >
+                <p id="precoUpM">x2 100</p>
+                  
+            </button>
+
+            <button id="BotoesUpB1" onclick="upaBananeira()" style="display: none;"> <img src="Imagens/Bananaira.png" alt="" width="30px" >
+                <p id="precoUpB">x2 100</p>
+                  
+            </button>
+
+            <button id="BotoesUpE1" onclick="upEsmerald()" style="display: none;"> <img src="Imagens/Esmerald.png" alt="" width="30px" >
+                <p id="precoUpE">x2 120000</p>
+                  
+            </button>
+            
+            <button id="BotoesUpB2" onclick="upBox()" style="display: none;"> <img src="Imagens/Box.png" alt="" width="30px" >
+                <p id="precoUpB2">x2 1300000</p>
+                  
+            </button>
+            
+            <button id="BotoesUpBC1" onclick="upBanco()" style="display: none;"> <img src="Imagens/Banco.png" alt="" width="30px" >
+                <p id="precoUpBC1">x2 14000000</p>
+                  
+            </button>
+            
+            <button id="BotoesUpT1" onclick="upTemplo()" style="display: none;"> <img src="Imagens/Templo.png" alt="" width="30px" >
+                <p id="precoUpT1">x2 200000000</p>
+                  
+            </button>
+            
+            <button id="BotoesUpF1" onclick="upFetico()" style="display: none;"> <img src="Imagens/Feitico.png" alt="" width="30px" >
+                <p id="precoUpF1">x2 330000000</p>
+                  
+            </button>
+
+            
+            
+
+           
+            
+        </div>
+        <div class="separetorUp"></div>
+        
+        <button class="BotoesL" onclick="Bcursor()" value="Fazer Banana" > <img src="Imagens/Cursor.png" alt="" width="50px">
+            Auto click a cada 10s
+            <p id="precoCursor"></p>  
+        </button>
+
+
+        <button class="BotoesL" onclick="Bmacaco()" id="macaco"> <img src="Imagens/macaco.png" alt="" width="50px">
+            Macacos Catam Bananas
+            <p id="precoMacaco"></p>
+        </button>
+        <button class="BotoesL" onclick="Bbananeira()"> <img src="Imagens/Bananaira.png" alt="" width="50px">
+            Bananas nacem em Bananeiras
+            <p id="precoBananeira"></p>
+        </button>
+
+
+        <button class="BotoesL" onclick="Besmerald()"> <img src="Imagens/Esmerald.png" alt="" width="50px">
+            Extrai Bananas de Cristais
+            <p id="precoEsmerald"></p>
+        </button>
+
+        <button class="BotoesL" onclick="Bbox()"> <img src="Imagens/Box.png" alt="" width="50px">
+            Muitas Bananas Por Caixote
+            <p id="precoBox"></p>
+        </button>
+
+        <button class="BotoesL" onclick="Bbanco()"> <img src="Imagens/Banco.png" alt="" width="50px">
+            Ações aplicadas em Bananas
+            <p id="precoBanco"></p>
+        </button>
+
+        <button class="BotoesL" onclick="Btemplo()"> <img src="Imagens/Templo.png" alt="" width="50px">
+            Sacrificio Por Bananas
+            <p id="precoTemplo"></p>
+        </button>
+
+
+        <button class="BotoesL" onclick="Bfeitico()"> <img src="Imagens/Feitico.png" alt="" width="50px">
+            Invoca Bananas
+            <p id="precoFeitico"></p>
+        </button>
+
+        
+
+        
+        </input>
+    </div>
+
+</body>
+
+
+
+
+
+
+</html>

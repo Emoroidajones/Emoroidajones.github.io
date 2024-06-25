@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    
+    <style>
+        body {
+            background-color: burlywood;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .D1 {
+            width: 800px;
+            height: 500px;
+            background-color: blue;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            margin: 1px;
+            overflow:hidden;
+            
+        }
+
+        .H1 {
+            width: 50px;
+            height: 50px;
+            background-color: yellow;
+            position: absolute;
+            border-radius: 50%;
+        }
+
+
+    </style>
+
+
+
+
+
+</head>
+
+<body>
+    <div>
+        <button onclick="direita()">Direita
+        </button>
+        <button onclick="esquerda()">Esquerda
+        </button>
+        <button onclick="cima()">Cima
+        </button>
+        <button onclick="baixo()">Baixo
+        </button>
+
+        <div>
+            <button onclick="abrir()">Abrir</button>
+            <button onclick="fechar()">Diminui</button>
+        </div>
+
+    </div>
+
+    <div id="D1" class="D1">
+        <div id="H1" class="H1"></div>
+    </div>
+
+
+</body>
+<script>
+    function esquerda() {
+        $("#H1").animate({
+            left: "+=50px"
+        })
+    }
+    function direita(){
+        $("#H1").animate({
+            left: "-=50px"
+        })
+    }
+    function baixo(){
+        $("#H1").animate({
+            top: "+=50px"
+        })
+    }
+    function cima(){
+        $("#H1").animate({
+            top: "-=50px"
+        })
+    }
+    
+    
+    document.onkeydown = Pega_Tecla;
+    l = 100;
+    t = 100;
+
+    velocidade = 50;
+    
+
+    function Pega_Tecla(evento){
+        codigo_tecla = evento.keyCode
+        console.log(codigo_tecla)
+
+
+        if(codigo_tecla == 37)
+        {
+            l = l - velocidade
+
+            H1.style.left = l + "px"
+
+        }
+
+        if(codigo_tecla == 39)
+        {
+            l = l + velocidade
+
+            H1.style.left = l + "px"
+
+        }
+
+
+        if(codigo_tecla == 38)
+        {
+            t = t - velocidade
+
+            H1.style.top = t + "px"
+
+        }
+
+        if(codigo_tecla == 40)
+        {
+            t = t + velocidade
+
+            H1.style.top = t + "px"
+
+        }
+        
+    }
+    
+    
+    
+    function fechar() {
+        $("#D1").slideUp(1000)
+    }
+    
+    function abrir() {
+        $("#D1").slideDown(1000)
+    }
+
+
+    // function Animar() {
+    //         $("#D1").animate(
+    //             {
+    //                 top: "310px",
+    //                 borderRadius:"50%",
+    //                 left: "+=200px",
+    //                 opacity:0.5
+    //             }, 500
+    //         )
+    //     }
+</script>
+
+</html>

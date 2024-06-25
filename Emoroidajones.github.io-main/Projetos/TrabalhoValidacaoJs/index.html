@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/minecraft-framework-css@1.1.9/css/main.css">
+    <script src="https://unpkg.com/minecraft-framework-css@1.1.9/css/assets/script.js"></script>
+</head>
+
+<body>
+    <form action="javascript:alert('Formuário aprovado para envio')" method="post" id="formcad">
+        <p>Dados do Servidor</p>
+
+        <div id="Conteudo">
+            <div id="Inserir">
+                <label for="uid">Nome do Servidor</label>
+                <input type="text" name="uid" id="uid" pattern="[A-Za-z0-9]{3,16}">
+
+            </div>
+
+            <div id="Inserir">
+                <label for="email">E-mail*</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <div id="Inserir">
+                <label for="pwd">Senha*</label>
+                <input type="password" name="pwd" id="pwd" required
+                    pattern="(?=(.*[0-9]))((?=.*[A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z]))^.{8,}$">
+            </div>
+            <div id="Inserir">
+                <label for="pwd2">Confirmar senha*</label>
+                <input type="password" name="pwd2" id="pwd2" required>
+            </div>
+
+            <div id="Selecionavel">
+                <label>Modo de Jogo</label>
+
+                <label for="mod">Criativo
+                    <input type="radio" name="mod" id="cri" value="cri" required>
+                </label>
+
+                <label for="mod">Sobrevivente
+                    <input type="radio" name="mod" id="sob" value="sob">
+                </label>
+                <label for="mod">Aventura
+                    <input type="radio" name="mod" id="aven" value="aven">
+                </label>
+
+            </div>
+
+
+            <div id="Selecionavel">
+                <label>Dificuldade</label>
+
+
+                <label for="Dif">Fácil
+
+                    <input type="radio" name="Dif" id="fac" value="fac">
+                </label>
+
+                <label for="Dif">Normal
+
+                    <input type="radio" name="Dif" id="norm" value="norm">
+                </label>
+
+                <label for="Dif">Hardcore
+
+                    <input type="radio" name="mod" id="Hard" value="">
+                </label>
+            </div>
+
+            <div id="nJogs">
+                <label for="njogadores">Número de<br>Jogadores</label>
+                <select name="dropdown" id="dropdown, njogadores">
+                    <option value="1">8</option>
+                    <option value="2">12</option>
+                    <option value="3">32</option>
+                    <option value="4">64</option>
+                </select>
+
+            </div>
+            <div id="data">
+                <label for="dataS">Validade Do Servidor Até:</label>
+                <input type="date" name="dataS" id="dataS" required>
+            </div>  
+
+            <div id="Termos">
+                <label for="lic">Rejeito os <br>
+                    Termos de serviço e a<br>
+                    Política de privacidade*</label>
+                <input type="checkbox" name="lic" id="lic">
+            </div>
+
+            <div id="Confirmar">
+                <input type="reset" value="Limpar" class="button-java-w">
+                <input type="submit" value="Criar" class="button-java-w">
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

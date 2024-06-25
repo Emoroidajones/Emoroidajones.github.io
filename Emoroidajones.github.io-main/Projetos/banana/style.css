@@ -1,0 +1,165 @@
+body{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 98vh;
+    overflow-y: hidden;
+
+}
+
+
+.Bananao{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: aliceblue;
+    width: 420px;
+    height: 100vh;
+    font-family: 'Kavoon';font-size: 22px;
+    background: url(https://img.freepik.com/fotos-premium/papel-de-parede-com-detalhes-do-padrao-de-bananas_174533-1125.jpg);
+}
+
+
+
+.Bananao button{
+    margin-top: 160px;
+    width: 200px;
+    height: 200px;
+    
+
+}
+
+
+.Loja {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 331px;
+    height: 665px;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#nuke{
+    z-index: 10000000000000;
+    
+}
+
+
+.Upgrades{
+    display: flex;
+    
+    width: 335px;
+    max-height: 210.38px;
+    overflow: auto;
+    
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    
+
+
+}
+
+#nuke{
+    all: unset;
+    cursor: pointer;
+    outline: revert;
+}
+
+
+.separetorUp{
+    width: 100%;
+    background: url(https://orteil.dashnet.org/cookieclicker/img/panelHorizontal.png?v=2);
+    height: 16px;
+}
+
+.Upgrades button{
+    width: 105.2px;
+    height: 105.2px;
+    font-family: 'Kavoon';font-size: 12px;
+    
+}
+
+
+.BotoesL{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Kavoon';font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+.separatorLeft {
+    left: 30%;
+}
+
+.separatorRight {
+    right: 331px;
+}
+
+.separatorLeft, .separatorRight {
+    width: 16px;
+    height: 100%;
+    background: url(	https://orteil.dashnet.org/cookieclicker/v10466/img/panelVertical.png) repeat-y;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    z-index: 100;
+}
+
+
+
+
+.Pesquisa{
+    background-image: url(Imagens/cidade.jpg);
+    background-size: cover;
+    width: 672px;
+    height: 700px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   
+}
+
+.Componentes{
+    
+    background-image: url(Imagens/laboratorio.jpg);
+    background-size: cover;
+    width: 600px;
+    height: 150px;
+    position: absolute;
+    left: 422px;
+    z-index: 1000;
+    
+}
+
+
+
+.Componentes div{
+    width: 600px;
+    font-family: 'Kavoon';font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+
