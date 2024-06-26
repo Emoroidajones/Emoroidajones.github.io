@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Google Maps</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+
+		#DIV_MAPA {
+			width: 100vw;
+			height: 100vh;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="DIV_MAPA"> </div>
+
+</body>
+
+<script>
+
+	LAT = 0
+	LON = 0
+
+	function showPosition(position) {
+		LAT = position.coords.latitude;
+		LON = position.coords.longitude;
+
+	}
+
+	function CRIAR_MAPA() {
+
+		if (navigator.geolocation) {
+			navigator.geolocation.watchPosition(showPosition);
+			try {
+				LAT = position.coords.latitude;
+				LON = position.coords.longitude;
+			}
+			catch (erro) {
+				LAT = -26.30120277271062,   // Caso não tenha GPS escolha um local padrão
+				LON = -48.844201670061814
+			}
+		}
+		else {
+			document.write("Seu navegador não suporta Geolocalização.");
+		}
+
+
+		var PROPRIEDADES = {
+			center: new google.maps.LatLng(LAT, LON),
+			zoom: 20,
+			mapTypeId: google.maps.MapTypeId.HYBRID
+		};
+		var map = new google.maps.Map(document.getElementById("DIV_MAPA"), PROPRIEDADES);
+
+		var MARCADOR1 = { lat: -26.33375712647347, lng: -48.83081317328508 };
+
+		var icone_marcador1 = new google.maps.Marker({
+			position: MARCADOR1,
+			animation: google.maps.Animation.DROP,
+			icon: { url: 'seta.png', scaledSize: new google.maps.Size(30, 30) },
+		});
+
+		icone_marcador1.setMap(map);
+
+		var MARCADOR2 = { lat: -26.310703313568364, lng: -48.838525882425024 };
+
+		var icone_marcador2 = new google.maps.Marker({
+			position: MARCADOR2,
+			animation: google.maps.Animation.BOUNCE,
+			icon: { url: 'seta2.png', scaledSize: new google.maps.Size(80, 35) },
+		});
+
+		icone_marcador2.setMap(map);
+		
+		var MARCADOR3 = { lat: -26.30123393936042, lng: -48.84392736045364 };
+
+		var icone_marcador3 = new google.maps.Marker({
+			position: MARCADOR3,
+			animation: google.maps.Animation.BOUNCE,
+			icon: { url: 'seta3.png', scaledSize: new google.maps.Size(50, 50) },
+		});
+
+		icone_marcador3.setMap(map);
+	}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXlg-UheeFvXNuGdat0w-R5L0cVxoTr34&callback=CRIAR_MAPA">
+</script>
+
+</html>

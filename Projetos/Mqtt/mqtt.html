@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecção MQTT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="chat-container">
+    <div id="controle">
+        <button onclick="Ligar();">ligar</button>
+        <button onclick="Desligar();">Desligar</button>
+        <button onclick="LigarV();">ligar_verde</button>
+        <button onclick="DesligarV();">Desligar_verde</button>
+    </div>
+
+    <div id="resposta">
+
+    </div>
+</div>
+<div id="chat" class="chat">
+    <input type="text" id="apelido" class="Apelido" size="10">
+    <input type="text" id="texto" class="Mensagem" size="40">
+    <button onclick="Enviar();">Enviar</button>
+    <button onclick="EnviarBanana();">B?</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js"></script>
+
+
+
+<img src="" width="">
+
+
+</body>
+
+
+<script>
+
+
+
+
+    // cria o tópico (variavel) que será acessado pelos PCs
+    // todo PC que Usar este Tópico conseguirá receber as Mensagens
+    // topico = "cedup/texto";
+
+
+    // //cria um cliente para se conectar ao servidor MQTT na porta 8000
+
+    // client = new Paho.MQTT.Client("broker.hivemq.com", Number(8000), "")
+    // client.connect({ onSuccess: Conectou })
+    topico = "Cedup/texto"
+    client = new Paho.MQTT.Client("ldb162bd.ala.us-east-1.emqxsl.com", Number(8084), "Usuario2000",)
+    client.connect({
+        useSSL: true,
+        userName: "usuario2000",
+        password: "12345",
+        onSuccess: Conectou
+    })
+
+    function Conectou() {
+        //envia o tópico (variável) lida por todos os computadores
+
+        client.subscribe(topico)
+        message = new Paho.MQTT.Message('')
+        message.destinationName = topico
+    }
+
+
+    //Criando as funções: Conexao_Perdida e Mensagem_Chegou
+
+
+    client.onConnectionLost = Conexao_perdida
+    client.onMessageArrived = Mensagem_Chegou
+    document.onkeydown = Pega_Tecla;
+
+
+
+    //Se perder a conexao será executada essa função:
+
+    function Conexao_perdida(responseObject) {
+        if (responseObject.errorCode !== 0) {
+            resposta.innerHTML += "Desconectado: " + responseObject.errorMessage
+        }
+
+    }
+
+
+
+    // sempre que alguem atualizar o topico cedup/texto esta função é executada
+
+
+    function Mensagem_Chegou(message) {
+        resposta.innerHTML += "<br>"
+        resposta.innerHTML += message.payloadString
+    }
+
+
+
+
+    function Enviar() {
+        valor = apelido.value + ";" + texto.value + "⚔️";
+        message = new Paho.MQTT.Message(valor)
+        message.destinationName = topico
+        client.send(message)
+    }
+    function Ligar() {
+        valor = "on"
+        message = new Paho.MQTT.Message(valor)
+        message.destinationName = topico
+        client.send(message)
+    }
+    function Desligar() {
+        valor = "off"
+        message = new Paho.MQTT.Message(valor)
+        message.destinationName = topico
+        client.send(message)
+    }
+    function LigarV() {
+        valor = "liga_verde"
+        message = new Paho.MQTT.Message(valor)
+        message.destinationName = topico
+        client.send(message)
+    }
+    function DesligarV() {
+        valor = "desliga_verde"
+        message = new Paho.MQTT.Message(valor)
+        message.destinationName = topico
+        client.send(message)
+    }
+    function limpar() {
+        texto.value = "";
+    }
+
+    function EnviarBanana() {
+        valor = apelido.value + ": " + "<img src='https://i.pinimg.com/736x/2e/54/51/2e5451cf80e1b899e3f62b83aecd192a.jpg' width='90px'>"
+        message = new Paho.MQTT.Message(valor)
+        message.destinationName = topico
+        client.send(message)
+    }
+
+
+    function Pega_Tecla(evento) {
+        codigo_tecla = evento.keyCode
+        console.log(codigo_tecla)
+
+        if (codigo_tecla == 13) {
+            Enviar();
+            limpar();
+        };
+        if (codigo_tecla == 187) {
+            EnviarBanana();
+        };
+    }
+
+
+</script>
+
+</html>

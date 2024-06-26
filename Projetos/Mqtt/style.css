@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, 'Lucida Sans', 'Lucida Sans Regular',
+        'Lucida Grande', 'Lucida Sans Unicode',
+        Verdana, sans-serif;
+    background-color: #b9a6a6;
+    margin: 0px;
+    padding: 20px;
+}
+
+.chat-container {
+    width: 600px;
+    margin: 0px auto;
+    background-color: rgb(253, 230, 230);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1;
+    overflow-y: scroll;
+    height: 500px;
+}
+
+.Menssagem {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.message img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.texto {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: calc(100% - 80px);
+    color: blue;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+#Apelido {
+    color: #007bff;
+}
+
+#chat {
+    position: fixed;
+    left: 363px;
+    top: 89%;
+    z-index: 2;
+    width: 600px;
+    margin: 0px auto;
+    background-color: rgb(253, 230, 230);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
