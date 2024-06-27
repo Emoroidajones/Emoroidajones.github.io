@@ -224,6 +224,17 @@ footer {
     grid-column: 1/5;
     flex-direction: column;
 }
+.adress {
+    /* align-self: baseline; */
+    /*! text-align: center; */
+    background-color: lightcoral;
+    position: sticky;
+    justify-content: center;
+    align-items: center;
+    grid-row: -1/-1;
+    grid-column: 1/5;
+    flex-direction: column;
+}
 
 .Lado {
     background-color: darksalmon;
@@ -335,6 +346,9 @@ footer {
 
     footer {
         height: 80px;
+    }
+    .adress {
+        height: 70px;
     }
 
     .eu {

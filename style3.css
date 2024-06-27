@@ -222,7 +222,17 @@ footer {
     grid-column: 1/5;
     flex-direction: column;
 }
-
+.adress {
+    /* align-self: baseline; */
+    /*! text-align: center; */
+    background-color: lightcoral;
+    position: sticky;
+    justify-content: center;
+    align-items: center;
+    grid-row: -1/-1;
+    grid-column: 1/5;
+    flex-direction: column;
+}
 .Lado {
     background-color: darksalmon;
     border: solid rosybrown;
@@ -253,11 +263,7 @@ footer {
     width: 80px;
     height: 40px;
 }
-.adress {
-    height: 100%;
-    width: 100%;
-    grid-column: 1;
-}
+
 
 @media screen and (max-width: 414px) {
     body {
@@ -326,6 +332,10 @@ footer {
     footer {
         height: 100%;
         width: 100%;
+        grid-column: 1;
+    }
+    .adress {
+        height: 80px;
         grid-column: 1;
     }
 
