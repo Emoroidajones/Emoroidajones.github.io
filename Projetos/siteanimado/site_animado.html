@@ -46,9 +46,9 @@
 
 <body>
     <div>
-        <button onclick="direita()">Direita
-        </button>
         <button onclick="esquerda()">Esquerda
+        </button>
+        <button onclick="direita()">Direita
         </button>
         <button onclick="cima()">Cima
         </button>
@@ -71,12 +71,12 @@
 <script>
     function esquerda() {
         $("#H1").animate({
-            left: "+=50px"
+            left: "-=50px"
         })
     }
     function direita(){
         $("#H1").animate({
-            left: "-=50px"
+            left: "+=50px"
         })
     }
     function baixo(){
