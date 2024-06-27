@@ -112,7 +112,7 @@ body {
     grid-row: 3;
     box-shadow: -12px 20px 20px 9px dimgray;
     background-color: darksalmon;
-    filter: blur(50px);
+    filter: blur(2px);
 }
 
 .Contatos2 {
