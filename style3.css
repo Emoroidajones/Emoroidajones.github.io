@@ -337,7 +337,7 @@ footer {
         width: 100%;
         background-color: darksalmon;
         border-radius: 5%;
-        border-color: solid coral;
+        border: coral;
     }
 
     .portifolio {
