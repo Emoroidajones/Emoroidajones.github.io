@@ -261,6 +261,11 @@ footer {
     width: 70px;
     height: 70px;
 }
+.adress {
+    height: 100%;
+    width: 100%;
+    grid-column: 1;
+}
 
 @media screen and (max-width: 414px) {
     body {

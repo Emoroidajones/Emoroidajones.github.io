@@ -253,6 +253,11 @@ footer {
     width: 80px;
     height: 40px;
 }
+.adress {
+    height: 100%;
+    width: 100%;
+    grid-column: 1;
+}
 
 @media screen and (max-width: 414px) {
     body {
@@ -323,6 +328,7 @@ footer {
         width: 100%;
         grid-column: 1;
     }
+
 
     .eu {
         height: 100%;
