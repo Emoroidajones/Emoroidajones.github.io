@@ -244,7 +244,18 @@ footer {
     background-color: honeydew;
     display: none;
 }
-
+.listagamesimg{
+width: 40px;
+height: 40px;
+}
+.listagamesimg2{
+width: 80px;
+height: 40px;
+}
+.contatosimg{
+    width: 70px;
+    height: 70px;
+}
 @media screen and (max-width: 414px) {
     body {
         grid-template-columns: 1fr;
