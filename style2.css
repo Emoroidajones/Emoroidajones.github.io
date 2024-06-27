@@ -206,6 +206,8 @@ img:hover {
     width: 30%;
     height: 100%;
     background-color: burlywood;
+    border: black;
+    border-radius: 2%;
 }
 
 footer {
