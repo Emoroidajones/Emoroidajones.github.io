@@ -300,7 +300,7 @@ footer {
         position: sticky;
         top: 0;
         background-color: gray;
-        border-radius: solid;
+        border-radius: 2%;
         width: 100%;
         justify-content: center;
         align-content: center;
